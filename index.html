@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Web Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.3/JsBarcode.all.min.js"></script>
+</head>
     <link rel="stylesheet" type="text/css" href="app.css" />
   </head>
   <body>
@@ -17,45 +19,90 @@
     </header>
 
     <main>
-      <section id="home">
-        <h1>Welcome to my web page!</h1>
-        <!-- Add more content here -->
-      </section>
-
-      <section id="view">
-        <h1>View our products</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla amet
-          excepturi id rem blanditiis autem error laudantium odio ipsum aperiam
-          possimus nostrum, est quod ut fugit nam iure corrupti adipisci.lorem
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-          animi nam non eaque, necessitatibus voluptates dolore, temporibus amet
-          pariatur dolores atque sed aliquam neque, dolorem voluptatem ullam ab
-          doloribus cumque.
-        </p>
-        <!-- Add more content here -->
-      </section>
-
-      <section id="contact">
-        <h1>Get in touch with us</h1>
-        <!-- Add more content here -->
-      </section>
-
-      <section id="about">
-        <h1>About our company</h1>
-        <!-- Add more content here -->
-      </section>
 
       <section id="page1">
-        <h1>Page 1</h1>
-        <input type="file" id="image-input" accept="image/*" />
-        <div id="image-preview"></div>
+        <h1>Upload Image</h1>
+        
+        <div>
+          <label for="imageInput">Upload the Cell image </label><br>
+          <input type="file" id="imageInput" /><br />
+          <button id = "butUpload" onclick="uploadImage()">Upload Image</button><br />
+          <div id="imageContainer" style="display: none">
+            <img id="uploadedImage" />
+          </div>
+          <p id="imageId"></p>
+        </div>
+
+        <div id="contentDiv" style="display: none;">
+          <div class="content">
+            <!-- <input type="text" id="text"> -->
+            <svg id="barcode"></svg>
+            <!-- <button id="btn">Generate</button> -->
+          </div>
+        </div>
 
         <!-- Add more content here -->
       </section>
 
       <section id="page2">
-        <h1>Page 2</h1>
+        <h1>Meta Information</h1>
+
+        <div class="formContainer">
+          <table>
+      <!--        <tr>
+              <th colspan="2">Form Inside Table</th>
+          </tr> -->
+            <form action="#" >
+            <tr>
+              <td><label for="surname">Cell Condition:</label></td>
+              <td>
+                  <select id="selectOption" name="selectOption">
+          <option value="option1" selected>Recycled</option>
+          <option value="option2" >New Cell</option>
+        </select>
+                </td>
+            </tr>
+            <tr>
+              <td><label for="othernames">Manufacturer: </label></td>
+              <td><input type="text" id="manufacturer" name="manufacturer" placeholder="Enter cell manufacturer" value="Molicel"></td>
+            </tr>
+            <tr>
+              <td><label for="email">Model:</label></td>
+              <td><input type="text" id="model" name="model" placeholder="Enter cell model" value="INR21700-P45B"></td>
+            </tr>
+            <tr>
+              <td><label for="phone">Type:</label></td>
+              <td><input type="text" id="type" name="type" placeholder="Enter cell type" value="Li-ion"></td>
+            </tr>
+            <tr>
+              <td><label for="formfactor">Form factor:</label></td>
+              <td><input type="text" id="formfactor" name="formfactor" placeholder="Enter cell form factor" value="Cylindrical 21700"></td>
+            </tr>
+             <tr>
+              <td><label for="mass">Mass(g):</label></td>
+              <td><input type="numbers" id="mass" name="mass" placeholder="Enter cell mass" value="70"></td>
+            </tr>
+             <tr>
+              <td><label for="hei">Height(mm):</label></td>
+              <td><input type="text" id="hei" name="hei" placeholder="Enter cell height" value="70.15"></td>
+            </tr>
+             <tr>
+              <td><label for="diameter">Diameter(mm):</label></td>
+              <td><input type="text" id="diameter" name="diameter" placeholder="Enter cell diameter" value="21.55"></td>
+            </tr>
+             <tr>
+              <td><label for="volume">Volume(cm&sup3):</label></td>
+              <td><input type="text" id="volume" name="volume" placeholder="Enter cell volume" value="25.59"></td>
+            </tr>
+              <tr>
+          <td colspan="2" class="cell-with-button">
+      <!--       <button>Save</button> -->
+            <input type= "submit" value="Submit">
+          </td>
+        </tr>
+            </form>
+          </table>
+        </div>
         <!-- Add more content here -->
       </section>
 
