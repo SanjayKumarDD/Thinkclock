@@ -62,7 +62,7 @@ h1 {
 }
 
 /* Input type file */
-#imageInput {
+#imageInput ,#csv-file{
   margin: 20px;
 }
 /* image uploading */
