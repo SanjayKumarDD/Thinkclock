@@ -130,7 +130,8 @@ h1 {
 
 /*_____page 2 ________*/
 /*table */
-.formContainer {
+.formContainer,
+#page3 {
   margin: 0 auto;
   width: 50%; /* Adjust as needed */
 }
@@ -140,9 +141,9 @@ table {
   width: 100%;
 }
 
-td {
+/* td {
   padding: 8px;
-}
+} */
 
 input[type="text"],
 #selectOption,
@@ -156,5 +157,33 @@ input[type="text"]:focus,
 #selectOption,
 input {
   outline: none;
-  border: 2px solid #007bff; /* Change the color as needed */
+  border: 2px solid #f2f2f2; /* Change the color as needed */
+  text-align: center;
+}
+
+input[type="submit"]{
+  background-color: white;
+}
+
+/*__________________________________*/
+/*___page3____________*/
+/* h1 {
+  text-align: center;
+  margin-bottom: 30px;
+} */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+th {
+  background-color: #4caf50;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
