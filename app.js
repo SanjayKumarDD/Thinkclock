@@ -1,4 +1,3 @@
-// uploading the image and displaying it
 let cellid;
 function uploadImage() {
   var input = document.getElementById("imageInput");
@@ -27,11 +26,3 @@ function uploadImage() {
 
   reader.readAsDataURL(file);
 }
-
-// generating bar code
-
-// document.getElementById("butUpload").addEventListener("click", () => {
-//   // let text = document.getElementById("text").value;
-//     let text = cellid;
-//   JsBarcode("#barcode", text);
-// });

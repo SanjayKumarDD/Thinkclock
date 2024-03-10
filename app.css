@@ -51,7 +51,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem 0;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -117,7 +117,8 @@ h1 {
   width: 300px;
   margin: 30px 0px 30px 0px;
 }
-#butUpload {
+#butUpload,
+#submit-button {
   padding: 12px 40px;
   background-color: rgb(2, 103, 66);
   color: #fff;
@@ -161,7 +162,7 @@ input {
   text-align: center;
 }
 
-input[type="submit"]{
+input[type="submit"] {
   background-color: white;
 }
 
