@@ -26,3 +26,13 @@ function uploadImage() {
 
   reader.readAsDataURL(file);
 }
+
+// Smooth scrolling down to page sections when clicking on navigation links
+document.querySelectorAll('header li a').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const targetId = link.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  });
+});
