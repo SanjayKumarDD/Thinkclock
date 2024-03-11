@@ -15,6 +15,7 @@
         <li><a href="#page2">Meta Data</a></li>
         <li><a href="#page3">Electrical Data</a></li>
         <li><a href="#page4">Upload CSV</a></li>
+        <li><a href="#page5">Circuit Model</a></li>
         <li><a href="#footerend">About Us</a></li>
       </ul>
     </header>
@@ -339,15 +340,139 @@
 
       <section id="page4">
         <h1>Upload CSV file</h1>
-        
         <form id="csv-upload-form">
           <label for="csv-file">Upload csv file</label>
           <input id="csv-file" type="file" id="csv-file" accept=".csv" />
           <button type="button" id="submit-button">Upload</button>
         </form>
+        <div class="image-container">
+          <!-- <button id="my-button">Click me</button> -->
+          <img src="circuit.png" />
+        </div>
       </section>
+      <section id="page5">
+        <h1>Equivalent Circuit Model</h1>
 
-      
+        <div class="image-container">
+          <!-- <button id="my-button">Click me</button> -->
+          <img id="my-image" src="circuit.png" style="display: none" />
+        </div>
+
+        <form action="#">
+          <table>
+            <tr>
+              <th>Parameter</th>
+              <th>Value</th>
+              <th>Explanation</th>
+              <th>
+                Visual Indicator (Show visually the current value compared to
+                min and max values, assume min-max values of each parameter)
+              </th>
+            </tr>
+            <tr>
+              <td>Rb</td>
+              <td><input type="text" placeholder="Enter Rb " name="Rb" /></td>
+              <td>Electrolyte resistance</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Enter electrolyte resistance"
+                  name="Rb_visual"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>R_SEI</td>
+              <td>
+                <input type="text" placeholder="Enter R_SEI" name="R_SEI" />
+              </td>
+              <td>Resistance due to SEI layer</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Entert Resistanc due to SEI layer"
+                  name="R_SEI_visual"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>CPE_SEI</td>
+              <td>
+                <input type="text" placeholder="Enter CPE_SEI" name="CPE_SEI" />
+              </td>
+              <td>Capacitance due to SEI layer</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Enter CPE_SEI value"
+                  name="CPE_SEI_visual"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>R_CT</td>
+              <td>
+                <input type="text" placeholder="Enter R_CT" name="R_CT" />
+              </td>
+              <td>
+                Charge-transfer resistancethat models the voltage drop over the
+                electrode–electrolite interface due to aload
+              </td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Enter R_CT value"
+                  name="R_CT_visual"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>CPE_DL</td>
+              <td>
+                <input type="text" placeholder="Enter CPE_DL" name="CPE_DL" />
+              </td>
+              <td>
+                Double-layer capacitance that models the effect of charges
+                building up in the electrolyte at the electrode surface
+              </td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Enter CPE_DL value"
+                  name="CPE_DL_visual"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>W_Warburg</td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Enter W_Warburg"
+                  name="W_Warburg"
+                />
+              </td>
+              <td>
+                Frequency-dependent Warburg impedancemodels diffusion of lithium
+                ions in the electrodes
+              </td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Enter W_Warburg value"
+                  name="W_Warburg_visual"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4" class="cell-with-button">
+                <input type="submit" value="Save" />
+              </td>
+              <!-- <td colspan="3"></td>              <td><input type="submit" name="Save"></button></td> -->
+            </tr>
+          </table>
+        </form>
+      </section>
     </main>
     <footer id="footerend">
       <p>Created by Sanjay Kumar D. ThinkClock Battery Lab</p>

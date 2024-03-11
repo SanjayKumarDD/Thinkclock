@@ -62,7 +62,8 @@ h1 {
 }
 
 /* Input type file */
-#imageInput ,#csv-file{
+#imageInput,
+#csv-file {
   margin: 20px;
 }
 /* image uploading */
@@ -71,11 +72,22 @@ h1 {
   border: 1px solid black;
   padding: 10px;
   margin-top: 10px;
+  width: 100%;
+  /* padding: 2rem; */
+  box-sizing: border-box;
+  background-color: #f5f9fa;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 #uploadedImage {
   display: block;
   margin-left: 0;
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  object-fit: contain;
 }
 
 #imageContainer {
@@ -95,7 +107,7 @@ h1 {
 /* bar code ______________________________________*/
 
 .content {
-  width: 350px;
+  width: 100%;
   /* position: absolute;
   top: 50%;
   left: 50%; */
@@ -187,4 +199,27 @@ th {
 }
 tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+
+/* #my-image {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+} */
+
+.image-container {
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: #f5f9fa;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  object-fit: contain; /* Add this line */
 }

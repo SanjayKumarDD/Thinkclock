@@ -36,3 +36,15 @@ document.querySelectorAll('header li a').forEach(link => {
     targetElement.scrollIntoView({ behavior: 'smooth' });
   });
 });
+
+
+
+
+// show circuit image on uploading csv file 
+
+const button = document.getElementById("submit-button");
+const image = document.getElementById("my-image");
+
+button.addEventListener("click", function() {
+  image.style.display = "block";
+});
