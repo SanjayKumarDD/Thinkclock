@@ -37,6 +37,25 @@ document.querySelectorAll('header li a').forEach(link => {
   });
 });
 
+document.getElementById('submit-button').addEventListener('click', function() {
+  console.log("Hi")
+  var file = document.getElementById('csv-file').files[0];
+  var formData = new FormData();
+  formData.append('file', file);
+
+  fetch('http://localhost:5000/upload_csv', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.blob())
+  .then(blob => {
+    var img = document.createElement('img');
+    img.src = URL.createObjectURL(blob);
+    document.getElementById('bodePlot').appendChild(img);
+
+  })
+  .catch(error => console.error('Error:', error));
+});
 
 
 

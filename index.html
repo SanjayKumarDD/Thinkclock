@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ThinkClock</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.3/JsBarcode.all.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <link rel="stylesheet" type="text/css" href="app.css" />
   </head>
   <body>
@@ -337,7 +339,7 @@
           </table>
         </form>
       </section>
-
+      
       <section id="page4">
         <h1>Upload CSV file</h1>
         <form id="csv-upload-form">
@@ -349,6 +351,8 @@
           <!-- <button id="my-button">Click me</button> -->
           <img src="circuit.png" />
         </div>
+      </section>
+      <section id="bodePlot" style="height: 600px;">
       </section>
       <section id="page5">
         <h1>Equivalent Circuit Model</h1>
